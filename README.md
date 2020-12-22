@@ -29,8 +29,9 @@ hello package 遵循 LGPLv2.1 许可，详见 `LICENSE` 文件。
 > 说明：列出该 package 对于其他 package 、RT-Thread 操作系统版本等软件方面的依赖关系。
 
 - RT-Thread 3.0+
+- OLED
 
-## 2、如何打开 hello
+## 2、如何打开 TinyGUI
 
 > 说明：描述该 package 位于 menuconfig 的位置，并对与其相关的配置进行介绍
 
@@ -38,20 +39,19 @@ hello package 遵循 LGPLv2.1 许可，详见 `LICENSE` 文件。
 
 ```
 RT-Thread online packages
-    miscellaneous packages --->
-        [*] A hello package
+    multimedia packages --->
+        [*] TinyGUI
 ```
 
 然后让 RT-Thread 的包管理器自动更新，或者使用 `pkgs --update` 命令更新包到 BSP 中。
 
-## 3、使用 hello
+## 3、使用 TinyGUI
 
 > 说明：在这里介绍 package 的移植步骤、使用方法、初始化流程、准备工作、API 等等，如果移植或 API 文档内容较多，可以将其独立至 `docs` 目录下。
 
-在打开 hello package 后，当进行 bsp 编译时，它会被加入到 bsp 工程中进行编译。
+在打开 TinyGUI 后，当进行 bsp 编译时，它会被加入到 bsp 工程中进行编译。
 
-* 完整的 API 手册可以访问这个[链接](docs/api.md)
-* 更多文档位于 [`/docs`](/docs) 下，使用前 **务必查看**
+使用TinyGUI必须首先移植一款单色屏驱动。
 
 ## 4、注意事项
 
@@ -59,5 +59,5 @@ RT-Thread online packages
 
 ## 5、联系方式 & 感谢
 
-* 维护：name
-* 主页：https://github.com/RT-Thread-packages/hello
+* 维护：qingehao
+* 主页：https://github.com/qingehao/TinyGUI
