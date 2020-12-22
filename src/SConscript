@@ -1,8 +1,8 @@
 from building import *
 
 cwd     = GetCurrentDir()
-src     = Glob('*.c') + Glob('*.cpp')
-CPPPATH = [cwd + '/../inc']
+src     = Glob('*.c') + Glob('*.cpp')+Glob('./lcmdrv/*.cpp')
+CPPPATH = [cwd + '/../inc']+[cwd + '/../inc/lcmdrv']
 
 group = DefineGroup('TinyGUI', src, depend = ['PKG_USING_TinyGUI'], CPPPATH = CPPPATH)
 
