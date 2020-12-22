@@ -4,6 +4,6 @@ cwd     = GetCurrentDir()
 src     = Glob('*.c') + Glob('*.cpp')
 CPPPATH = [cwd]
 
-group = DefineGroup('TinyGUI', src, depend = ['TinyGUI_USING_EXAMPLE'], CPPPATH = CPPPATH)
+group = DefineGroup('TinyGUI', src, depend = ['PKG_USING_TinyGUI_EXAMPLE'], CPPPATH = CPPPATH)
 
 Return('group')
